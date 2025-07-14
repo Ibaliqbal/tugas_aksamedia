@@ -25,12 +25,14 @@ const Home = () => {
   );
   return (
     <>
-      <h1 className="text-4xl font-bold text-gray-900">
+      <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-50">
         Welcome back {auth.user.username}!
       </h1>
       <div className="mt-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <h1 className="text-2xl font-bold text-gray-900">Recents Projects</h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-50">
+            Recent Projects
+          </h1>
           <Button
             variant="primary"
             className="w-full sm:w-auto"
@@ -85,7 +87,7 @@ const Home = () => {
                 d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
               />
             </svg>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">
+            <h3 className="text-lg font-medium text-gray-900 mb-2 dark:text-gray-50">
               No projects found
             </h3>
             <Button variant="primary" onClick={() => setOpenModal(true)}>

@@ -1,5 +1,3 @@
-"use client";
-
 import type React from "react";
 import { useState } from "react";
 import { Modal } from "./modal";
@@ -22,7 +20,6 @@ export const NewProjectForm = ({
   onClose,
   onSubmit,
 }: NewProjectFormProps) => {
-
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -176,10 +173,10 @@ export const NewProjectForm = ({
             placeholder="Enter project description"
             rows={4}
             disabled={loading}
-            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm transition-colors focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 resize-none ${
+            className={`w-full rounded-lg border bg-white dark:bg-gray-800 px-3 py-2 text-sm transition-colors focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 resize-none ${
               errors.description
                 ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                : "border-gray-300 focus:border-blue-500 focus:ring-blue-500/20"
+                : "border-gray-300 dark:border-gray-700 focus:border-blue-500 focus:ring-blue-500/20 dark:text-gray-50 dark:placeholder-gray-400"
             }`}
           />
           {errors.description && (

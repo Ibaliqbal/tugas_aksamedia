@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import type React from "react";
+import { useState, useRef, useEffect } from "react";
 
 type DropdownProps = {
   trigger: React.ReactNode;
@@ -45,7 +46,7 @@ export const Dropdown = ({
 
       {isOpen && (
         <div
-          className={`absolute top-full mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50 ${alignmentClasses[align]} ${className}`}
+          className={`absolute top-full mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50 ${alignmentClasses[align]} ${className}`}
         >
           {children}
         </div>
@@ -70,7 +71,7 @@ export const DropdownItem = ({
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center gap-2 transition-colors ${className}`}
+      className={`w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center gap-2 transition-colors ${className}`}
     >
       {icon && <span className="w-4 h-4">{icon}</span>}
       {children}

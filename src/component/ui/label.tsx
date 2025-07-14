@@ -10,7 +10,8 @@ export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
     { className = "", required = false, size = "md", children, ...props },
     ref
   ) => {
-    const baseStyles = "block font-medium text-gray-700 mb-1";
+    const baseStyles =
+      "block font-medium text-gray-700 dark:text-gray-300 mb-1";
 
     const sizes = {
       sm: "text-xs",

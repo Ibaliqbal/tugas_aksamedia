@@ -33,7 +33,6 @@ const Profile = () => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
-      // onUpdateUser(formData);
       auth.updateData(formData);
 
       setMessage({ type: "success", text: "Profile updated successfully!" });
@@ -50,7 +49,7 @@ const Profile = () => {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">
+      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-50 mb-6 text-center">
         Profile Settings
       </h1>
 
@@ -63,11 +62,12 @@ const Profile = () => {
             type="email"
             value={formData.email || ""}
             disabled
-            className="mt-1 bg-gray-100 cursor-not-allowed"
+            className="mt-1 bg-gray-100 dark:bg-gray-700 cursor-not-allowed dark:text-gray-300"
           />
-          <p className="text-xs text-gray-500 mt-1">Email cannot be changed.</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+            Email cannot be changed.
+          </p>
         </div>
-
         <div>
           <Label htmlFor="username" required>
             Full Name
@@ -83,19 +83,17 @@ const Profile = () => {
             disabled={loading}
           />
         </div>
-
         {message && (
           <div
             className={`p-3 rounded-lg text-sm ${
               message.type === "success"
-                ? "bg-green-100 text-green-700"
-                : "bg-red-100 text-red-700"
+                ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300"
+                : "bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300"
             }`}
           >
             {message.text}
           </div>
         )}
-
         <Button
           type="submit"
           variant="primary"

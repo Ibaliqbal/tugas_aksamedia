@@ -1,5 +1,3 @@
-"use client";
-
 import type React from "react";
 import { useState, useEffect } from "react";
 import { Input } from "./ui/input";
@@ -172,10 +170,10 @@ export const EditProjectForm = ({
             placeholder="Enter project description"
             rows={4}
             disabled={loading}
-            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm transition-colors focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 resize-none ${
+            className={`w-full rounded-lg border bg-white dark:bg-gray-800 px-3 py-2 text-sm transition-colors focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50 mt-1 resize-none ${
               errors.description
                 ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                : "border-gray-300 focus:border-blue-500 focus:ring-blue-500/20"
+                : "border-gray-300 dark:border-gray-700 focus:border-blue-500 focus:ring-blue-500/20 dark:text-gray-50 dark:placeholder-gray-400"
             }`}
           />
           {errors.description && (
@@ -211,13 +209,13 @@ export const EditProjectForm = ({
               checked={formData.isCompleted}
               onChange={handleInputChange}
               disabled={loading}
-              className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 dark:checked:bg-blue-600 dark:checked:border-transparent"
             />
             <Label htmlFor="edit-completed" className="mb-0">
               Mark as completed
             </Label>
           </div>
-          <p className="text-gray-500 text-xs mt-1">
+          <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">
             Check this box if the project has been completed
           </p>
         </div>

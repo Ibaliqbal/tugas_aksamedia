@@ -34,7 +34,9 @@ const Projects = () => {
   return (
     <div>
       <div className="flex items-center justify-between">
-        <h1 className="text-4xl font-bold text-gray-900">Projects</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-50">
+          Projects
+        </h1>
         <Input
           placeholder="Search projects..."
           value={searchTerm}

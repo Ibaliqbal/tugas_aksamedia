@@ -25,7 +25,7 @@ export const ConfirmDialog = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={title} size="sm">
       <div className="space-y-4">
-        <p className="text-gray-600">{message}</p>
+        <p className="text-gray-600 dark:text-gray-300">{message}</p>
 
         <div className="flex gap-3 pt-4">
           <Button

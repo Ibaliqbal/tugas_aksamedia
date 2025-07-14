@@ -26,8 +26,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
       secondary: "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500",
       outline:
-        "border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500",
-      ghost: "text-gray-700 hover:bg-gray-100 focus:ring-gray-500",
+        "border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 focus:ring-blue-500",
+      ghost:
+        "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-gray-500",
     };
 
     const sizes = {
@@ -45,7 +46,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {loading && (
           <svg
-            className="animate-spin -ml-1 mr-2 h-4 w-4"
+            className="animate-spin -ml-1 mr-2 h-4 w-4 text-white dark:text-gray-300"
             fill="none"
             viewBox="0 0 24 24"
           >

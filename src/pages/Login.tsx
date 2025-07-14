@@ -86,16 +86,18 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-2">
             Welcome Back
           </h2>
-          <p className="text-gray-600">Please sign in to your account</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            Please sign in to your account
+          </p>
         </div>
 
-        <div className="bg-white p-8 rounded-xl shadow-lg">
+        <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <Label htmlFor="username" required>
@@ -141,11 +143,11 @@ export default function Login() {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 dark:checked:bg-blue-600 dark:checked:border-transparent"
                 />
                 <label
                   htmlFor="remember-me"
-                  className="ml-2 block text-sm text-gray-700"
+                  className="ml-2 block text-sm text-gray-700 dark:text-gray-300"
                 >
                   Remember me
                 </label>
@@ -154,7 +156,7 @@ export default function Login() {
               <div className="text-sm">
                 <a
                   href="#"
-                  className="text-blue-600 hover:text-blue-500 font-medium"
+                  className="text-blue-600 hover:text-blue-500 font-medium dark:text-blue-400 dark:hover:text-blue-300"
                 >
                   Forgot your password?
                 </a>
@@ -175,10 +177,10 @@ export default function Login() {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300" />
+                <div className="w-full border-t border-gray-300 dark:border-gray-700" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">
+                <span className="px-2 bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400">
                   Or continue with
                 </span>
               </div>
@@ -186,7 +188,10 @@ export default function Login() {
 
             <div className="mt-6 grid grid-cols-2 gap-3">
               <Button variant="outline" className="w-full bg-transparent">
-                <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
+                <svg
+                  className="w-4 h-4 mr-2 text-gray-700 dark:text-gray-300"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="currentColor"
                     d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -209,7 +214,7 @@ export default function Login() {
 
               <Button variant="outline" className="w-full bg-transparent">
                 <svg
-                  className="w-4 h-4 mr-2"
+                  className="w-4 h-4 mr-2 text-gray-700 dark:text-gray-300"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -220,11 +225,11 @@ export default function Login() {
             </div>
           </div>
 
-          <p className="mt-6 text-center text-sm text-gray-600">
+          <p className="mt-6 text-center text-sm text-gray-600 dark:text-gray-400">
             Don't have an account?{" "}
             <a
               href="#"
-              className="text-blue-600 hover:text-blue-500 font-medium"
+              className="text-blue-600 hover:text-blue-500 font-medium dark:text-blue-400 dark:hover:text-blue-300"
             >
               Sign up here
             </a>

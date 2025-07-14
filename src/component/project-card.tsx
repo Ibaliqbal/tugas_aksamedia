@@ -27,18 +27,21 @@ export const ProjectCard = ({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-gray-200">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50 mb-2">
+            {title}
+          </h3>
           {description && (
-            <p className="text-gray-600 text-sm mb-3">{description}</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+              {description}
+            </p>
           )}
         </div>
-
         <div className="ml-4 flex-shrink-0">
           {isCompleted ? (
-            <div className="flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
+            <div className="flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium dark:bg-green-900 dark:text-green-300">
               <svg
                 className="w-3 h-3 mr-1"
                 fill="currentColor"
@@ -53,7 +56,7 @@ export const ProjectCard = ({
               Completed
             </div>
           ) : (
-            <div className="flex items-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+            <div className="flex items-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium dark:bg-blue-900 dark:text-blue-300">
               <svg
                 className="w-3 h-3 mr-1"
                 fill="currentColor"
@@ -71,10 +74,10 @@ export const ProjectCard = ({
         </div>
       </div>
 
-      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-        <div className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700">
+      <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
+        <div className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300">
           <svg
-            className="w-3 h-3 inline mr-1"
+            className="w-3 h-3 inline mr-1 text-gray-500 dark:text-gray-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -92,13 +95,13 @@ export const ProjectCard = ({
       <div className="flex gap-2 mt-4">
         <button
           onClick={() => onEdit(id)}
-          className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors"
+          className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
         >
           Edit
         </button>
         <button
           onClick={() => onDelete(id)}
-          className="px-4 py-2 border border-red-300 text-red-600 rounded-md text-sm font-medium hover:bg-red-50 transition-colors"
+          className="px-4 py-2 border border-red-300 text-red-600 rounded-md text-sm font-medium hover:bg-red-50 dark:border-red-700 dark:text-red-400 dark:hover:bg-red-900 transition-colors"
         >
           <svg
             className="w-4 h-4"
